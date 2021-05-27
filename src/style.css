@@ -20,6 +20,7 @@ body {
 }
 .card {
   width: 40px;
+  opacity: 1;
 }
 .form_group {
   padding-left: 40px;
@@ -37,4 +38,7 @@ body {
 }
 .btn:hover {
   background-color: green;
+}
+.notThis {
+  opacity: 0.2;
 }

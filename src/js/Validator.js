@@ -3,6 +3,7 @@
 /* eslint-disable no-plusplus */
 // eslint-disable-next-line linebreak-style
 /* eslint-disable class-methods-use-this */
+import cardRegexp from './cardRegexp.js';
 
 export default class Validator {
   validateUsername() {
@@ -25,8 +26,10 @@ export default class Validator {
         }
       }
       const summ = arr.reduce((a, b) => a + b);
-      if (!(summ % 10)) {
+      if (!(summ % 10) && cardRegexp.onlyNumber.test(input.value) && input.value.length === 15) {
         alert('Card is valid');
+      } else {
+        alert('Card is not valid');
       }
     });
   }
